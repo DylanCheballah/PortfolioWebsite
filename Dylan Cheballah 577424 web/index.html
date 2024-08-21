@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <section id="Container">
+        <div class="top-bar">
+            <div class="name-and-image">
+                <h1>Dylan Cheballah</h1>
+                <img src="dylanPhoto.jpeg" alt="Dylan">
+            </div>
+            <nav>
+                <button id="aboutdylan" onclick="MainPage()">About Dylan</button>
+                <button id="myskills" onclick="SkillsPage()">My Skills</button>
+                <button id="contact" onclick="ContactInfo()">Contact Me</button>
+            </nav>
+        </div>
+        <div class="grid-container">
+            <div class="grid-item">
+                <p>As a driven third-year computer science student at Belgium Campus ITversity, I offer a unique blend of technical expertise and a steadfast work ethic. Since beginning my journey at the age of 20, I've demonstrated unwavering commitment to personal growth and learning.</p>
+            </div>
+            <div class="grid-item">
+                <p>From a young age, I supported my parents in their work, instilling in me a sense of responsibility, adaptability, and resourcefulness. These formative experiences have shaped me into an open-minded individual who thrives in diverse and challenging environments.</p>
+            </div>
+            <div class="grid-item">
+                <p>Fueled by innate curiosity, I am constantly driven to explore new ideas, embrace innovative solutions, and expand the boundaries of my knowledge. With solid technical skills already in my arsenal, I am always eager to acquire new ones.</p>
+            </div>
+            <div class="grid-item">
+                <p>In my third year, I am actively honing my skills and knowledge, continually pushing myself to excel. I am committed to making the most of my time at Belgium Campus ITversity, leveraging every opportunity to grow professionally and personally.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function MainPage() {
+            window.location.href = "index.html";
+        }
+
+        function SkillsPage() {
+            window.location.href = "Skills.html";
+        }
+
+        function ContactInfo() {
+            window.location.href = "Contact.html";
+        }
+    </script>
+</body

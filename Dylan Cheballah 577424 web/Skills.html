@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="Skills.css">
+</head>
+<body style="background: url('luke-chesser-eICUFSeirc0-unsplash (1).jpg')">
+    <section id="Container">
+        <div class="top-bar">
+            <div class="name-and-image">
+                <h1>Dylan Cheballah</h1>
+                <img src="dylanPhoto.jpeg" alt="Dylan">
+            </div>
+            <nav>
+                <button id="aboutdylan" onclick="MainPage()">About Dylan</button>
+                <button id="myskills" onclick="SkillsPage()">My Skills</button>
+                <button id="contact" onclick="ContactInfo()">Contact Me</button>
+            </nav>
+        </div>
+
+        <div class="skills-prog">
+            <h3><i class="Programmer"></i>My Skills</h3>
+            <ul>
+                <li data-percent="90">
+                    <span>HTML</span>
+                    <div class="skills-bar">
+                        <div class="bar"></div>
+                    </div>
+                </li>
+                <li data-percent="70">
+                    <span>CSS</span>
+                    <div class="skills-bar">
+                        <div class="bar"></div>
+                    </div>
+                </li>
+                <li data-percent="60">
+                    <span>JavaScript</span>
+                    <div class="skills-bar">
+                        <div class="bar"></div>
+                    </div>
+                </li>
+                <li data-percent="60">
+                    <span>C#</span>
+                    <div class="skills-bar">
+                        <div class="bar"></div>
+                    </div>
+                </li>
+                <li data-percent="60">
+                    <span>SQL</span>
+                    <div class="skills-bar">
+                        <div class="bar"></div>
+                    </div>
+                </li>
+                <li data-percent="50">
+                    <span>Python</span>
+                    <div class="skills-bar">
+                        <div class="bar"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>C# Programming</h3>
+                <p>Proficient in C# programming language for building versatile applications.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Website Design</h3>
+                <p>Skilled in creating visually appealing website layouts and user interfaces.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Collaboration and Teamwork</h3>
+                <p>Effective in collaborating with team members and working in team environments.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Software Development Life Cycle</h3>
+                <p>Experienced in the software development life cycle, from design to testing.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Problem Solving and Critical Thinking</h3>
+                <p>Demonstrated strong problem-solving and critical thinking skills in various situations.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Database Development</h3>
+                <p>Proficient in designing, implementing, and managing databases for efficient data storage and retrieval.</p>
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function MainPage() {
+            window.location.href = "index.html";
+        }
+
+        function SkillsPage() {
+            window.location.href = "Skills.html";
+        }
+
+        function ContactInfo() {
+            window.location.href = "Contact.html";
+        }
+
+        $(document).ready(function() {
+            $(".skills-prog li").find(".skills-bar").each(function(i) {
+                $(this).find(".bar").delay(i * 150).animate({
+                    width: $(this).parents("li").attr("data-percent") + "%"
+                }, 1000, "linear", function() {
+                    return $(this).css({"transition-duration": ".5s"});
+                });
+            });
+        });
+    </script>
+</body>
+</html>
